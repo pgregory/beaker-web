@@ -10,7 +10,8 @@ class Main
 		Loader.MACROS = null;
 		Loader.OPTIMIZED = false;
 		var t = new Template("view.mtt");
-		var cnx = neko.db.Sqlite.open("beaker.db");
+		var cnx = neko.db.Sqlite.open("/home/pgregory/haxe_test/web/beaker.db");
+		neko.Lib.print(cnx.dbName());
 
 		neko.db.Manager.cnx = cnx;
 		neko.db.Manager.initialize();
