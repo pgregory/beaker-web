@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Owner</th>
+		<th>Model</th>
+		<th>Processor</th>
+		<th>Proc. Count</th>
+		<th>OS</th>
+		<th>Compiler</th>
+	</tr>
+	::foreach row configs::
+	<tr class="odd::repeat.row.odd::">
+		<td> ::row.name::: </td>
+		<td> ::row.owner::: </td>
+		<td> ::row.model::: </td>
+		<td> ::row.processor::: </td>
+		<td> ::row.processor_count::: </td>
+		<td> ::row.os::: </td>
+		<td> ::row.compiler::: </td>
+	</tr> ::end::
+</table>
+

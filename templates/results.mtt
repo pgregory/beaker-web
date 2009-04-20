@@ -1,0 +1,30 @@
+<table border="2px solid">
+	<tr>
+		<td></td>
+		::foreach test tests::
+			<td> ::test.title:: </td>
+		::end::
+	</tr>
+	::foreach config configs::
+		<tr>
+			<td ::attr colspan '13'::>::config.name::</td>
+		</tr>
+		::foreach tag tags::
+			<tr class="odd::repeat.tag.odd::">
+				<td> ::tag.name:: </td>
+				::set resultSet = config.resultsByTag(tag.id)::
+				::foreach test tests::
+					::set result = resultSet.get(test.title)::
+					::if result != null::
+						<td> ::result.timeAsString()::: </td>
+					::else::
+						<td>n/a</td>
+					::end::
+				::end::
+			</tr>
+		::end::
+	::end::
+</table>
+
+
+

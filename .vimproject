@@ -1,0 +1,18 @@
+beaker-web=~/haxe_test/web [filter="*.hxml *.hx *.sql"] {
+ build.hxml
+ Config.hx
+ Main.hx
+ Result.hx
+ ResultManager.hx
+ Tag.hx
+ Test.hx
+ data.sql
+ templates=templates [filter="*.mtt"] {
+  configs.mtt
+  results.mtt
+  tags.mtt
+  template.mtt
+  tests.mtt
+  view.mtt
+ }
+}
