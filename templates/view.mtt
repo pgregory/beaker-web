@@ -2,8 +2,6 @@
 	::fill content::
 		<h1>View Beaker Results</h1>
 
-		::use 'configs.mtt'::::end::
-		::use 'tests.mtt'::::end::
 		::use 'results.mtt'::::end::
 	::end::
 ::end::

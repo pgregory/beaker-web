@@ -20,7 +20,7 @@ class Result extends neko.db.Object {
 		if(d.getMinutes() > 0) {
 			result = d.getMinutes() + "m";
 		}
-		return result + d.getSeconds() + "s";
+		return result + (time - (d.getMinutes()*60)) + "s";
 	}
 
 	static public var manager = new ResultManager();

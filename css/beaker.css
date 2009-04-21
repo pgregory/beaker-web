@@ -1,0 +1,11 @@
+tr.oddtrue {
+	background-color: lightgrey;
+}
+
+td.state-1, td.regression {
+	background-color: red;
+}
+
+td.state1, td.progression {
+	background-color:#4f4;
+}

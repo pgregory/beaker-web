@@ -1,13 +1,29 @@
-<form id="resultset_upload" action="http://beaker-web.aqsis.org/Convert.n" method="post" enctype="multipart/form-data">
-	<input type="HIDDEN" name="MAX_FILE_SIZE" value="800000"/>
-	<tr>
-		<td colspan="2">
-			<input type="file" name="resultset"><br clear="all"/><br/></input>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-			<input type="submit" name="Upload"/>
-		</td>
-	</tr>
+<form id="resultset_upload" action="http://beaker.aqsis.org/Convert.n" method="post" enctype="multipart/form-data">
+	<table>
+		<tr>
+			<td>
+				Config:
+			</td>
+			<td>
+				<select name="config">
+				::foreach config configs::
+					<option value="::config.name::">::config.name::</option>
+				::end::
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Result Set:
+			</td>
+			<td>
+				<input type="file" name="resultset"><br clear="all"/><br/></input>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="submit" name="Upload"/>
+			</td>
+		</tr>
+	</table>
 </form>

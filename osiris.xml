@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result_sets config="osiris">
+	<result_set tag="1.4.1">
+		<result test="capsules" time="236"/>
+		<result test="makehuman" time="398"/>
+		<result test="250mm" time="281"/>
+		<result test="25mm" time="59"/>
+		<result test="0mm" time="13"/>
+		<result test="killeroo" time="24"/>
+		<result test="smoky" time="198"/>
+		<result test="petunia" time="232"/>
+		<result test="depth complexity 10" time="7.4"/>
+		<result test="depth complexity 30" time="19"/>
+		<result test="depth complexity 100" time="16"/>
+		<result test="depth complexity rand" time="43"/>
+	</result_set>
+	<result_set tag="Beaker-1">
+		<result test="capsules" time="314"/>
+		<result test="makehuman" time="417"/>
+		<result test="250mm" time="106"/>
+		<result test="25mm" time="32"/>
+		<result test="0mm" time="17"/>
+		<result test="killeroo" time="26"/>
+		<result test="smoky" time="166"/>
+		<result test="petunia" time="261"/>
+		<result test="depth complexity 10" time="11"/>
+		<result test="depth complexity 30" time="33"/>
+		<result test="depth complexity 100" time="45"/>
+		<result test="depth complexity rand" time="65"/>
+	</result_set>
+	<result_set tag="Beaker-3">
+		<result test="capsules" time="143"/>
+		<result test="makehuman" time="806"/>
+		<result test="250mm" time="41"/>
+		<result test="25mm" time="18"/>
+		<result test="0mm" time="10"/>
+		<result test="killeroo" time="31"/>
+		<result test="smoky" time="160"/>
+		<result test="petunia" time="121"/>
+	</result_set>
+</result_sets>

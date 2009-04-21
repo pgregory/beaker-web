@@ -1,26 +1,50 @@
-<table border="2px solid">
-	<tr>
+<table id="results" border="2px solid">
+	<tr class="headings">
 		<td></td>
 		::foreach test tests::
-			<td> ::test.title:: </td>
+			<td class="test-title"> ::test.title:: </td>
 		::end::
+		<td class="metric-title">Performance Metric</td>
 	</tr>
 	::foreach config configs::
-		<tr>
-			<td ::attr colspan '13'::>::config.name::</td>
+		<tr class="config-row">
+			<td class="config-name" ::attr colspan repeat.test.size+2::>::config.name::</td>
 		</tr>
+		::set lastTotal = 0::
 		::foreach tag tags::
-			<tr class="odd::repeat.tag.odd::">
-				<td> ::tag.name:: </td>
-				::set resultSet = config.resultsByTag(tag.id)::
+			<tr class="result-row odd::repeat.tag.odd::">
+				<td class="tag-name"> ::tag.name:: </td>
+				::set total = 0::
 				::foreach test tests::
-					::set result = resultSet.get(test.title)::
+					::set result = config.getResult(tag.id, test.id)::
 					::if result != null::
-						<td> ::result.timeAsString()::: </td>
+						::set state = config.faster(tag, test)::
+						<td class="time state::state::">
+							::result.timeAsString():: 
+						</td>
+						::set total = total + result.time::
 					::else::
-						<td>n/a</td>
+						<td></td>
 					::end::
 				::end::
+				::set class = "no-change"::
+				::if lastTotal != 0 && total != 0::
+					::set perc = (lastTotal-total)/lastTotal*100::
+					::if total > lastTotal::
+						::set class = "regression"::
+					::elseif total < lastTotal::
+						::set class = "progression"::
+					::end::
+				::end::
+				::set lastTotal = total::
+				<td ::attr class "total "+class::>
+					::if total != 0::
+						::total::
+							::if perc != null::
+								(::helpers.truncatePercentage(perc)::)%)
+							::end::
+					::end::
+				</td>
 			</tr>
 		::end::
 	::end::

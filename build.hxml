@@ -6,4 +6,9 @@
 
 -neko Convert.n
 -main Convert
+
+--next
+
+-neko Upload.n
+-main Upload
 -lib mtwin
