@@ -1,6 +1,9 @@
 ::use 'template.mtt'::
 	::fill content::
 		<h1>View Beaker Results</h1>
+		::if alert::
+			::raw alert::
+		::end::
 
 		::use 'results.mtt'::::end::
 	::end::

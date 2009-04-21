@@ -1,6 +1,6 @@
-<table id="results" border="2px solid">
+<table id="results">
 	<tr class="headings">
-		<td></td>
+		<td class="test-title blank"></td>
 		::foreach test tests::
 			<td class="test-title"> ::test.title:: </td>
 		::end::
@@ -12,7 +12,7 @@
 		</tr>
 		::set lastTotal = 0::
 		::foreach tag tags::
-			<tr class="result-row odd::repeat.tag.odd::">
+			<tr class="result-row">
 				<td class="tag-name"> ::tag.name:: </td>
 				::set total = 0::
 				::foreach test tests::
@@ -24,7 +24,7 @@
 						</td>
 						::set total = total + result.time::
 					::else::
-						<td></td>
+						<td class="time no-time"></td>
 					::end::
 				::end::
 				::set class = "no-change"::

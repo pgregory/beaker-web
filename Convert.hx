@@ -3,13 +3,17 @@ class Convert
 	static function main()
 	{
 		var params = neko.Web.getMultipart(80000);
-		processResultSet(params.get("config"), params.get("resultset"));
-		var response : String = haxe.Http.request("http://beaker.aqsis.org/Main.n");
-		neko.Lib.print(response);
+		var alert : String = "";
+		if(haxe.Md5.encode(params.get("password")) == "bf6da5a41799708a33f0cd4dd167e4e2") {
+			processResultSet(params.get("config"), params.get("resultset"));
+		} else {
+			alert = "<div class=\"notification\">Failed: Invalid password</div>";
+		}
+		neko.Web.redirect("http://beaker.aqsis.org/Main.n");
 	}
 
 	static function processResultSet(config : String, resultset : String) {
-		var cnx = neko.db.Sqlite.open("/home/pgregory/haxe_test/web/beaker.db");
+		var cnx = neko.db.Sqlite.open(neko.Web.getCwd() + "beaker.db");
 
 		neko.db.Manager.cnx = cnx;
 		neko.db.Manager.initialize();

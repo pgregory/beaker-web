@@ -18,14 +18,13 @@ class Config extends neko.db.Object {
 	}
 	
 	public function faster(tag : Tag, test : Test) : Int {
-		var prev : Tag = tag.previousTag();
-		if(prev == null)
-			return 0;
+		var prev : Tag = tag;
+		var prevResult : Result = null;
 
-		var prevResult : Result = getResult(prev.id, test.id);
 		while( prev != null && prevResult == null ) { 
-			var prevResult = getResult(prev.id, test.id);
 			prev = prev.previousTag();
+			if(prev != null)
+				prevResult = getResult(prev.id, test.id);
 		}
 		if(prevResult != null) {
 			var currResult = getResult(tag.id, test.id);

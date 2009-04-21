@@ -2,6 +2,47 @@ tr.oddtrue {
 	background-color: lightgrey;
 }
 
+/* Results table */
+
+table#results {
+	empty-cells:show;
+	border-collapse:separate;
+	border:1px solid black;
+	border-spacing:1;
+}
+
+table#results * td {
+	border: 1px solid black;
+}
+
+tr.headings {
+}
+
+td.test-title {
+	border:0;
+	background-color:#cacaca;
+	text-align:center;
+}
+
+td.test-title.blank {
+	border:0;
+}
+
+td.metric-title {
+	border:0;
+	background-color:#cacaca;
+	text-align:center;
+}
+
+tr.config-row {
+}
+
+td.config-name {
+	background-color:#a8a8a8;
+	text-align:center;
+	text-transform:capitalize;
+}
+
 td.state-1, td.regression {
 	background-color: red;
 }
@@ -9,3 +50,13 @@ td.state-1, td.regression {
 td.state1, td.progression {
 	background-color:#4f4;
 }
+
+tr.result-row {
+}
+
+td.tag-name {
+	background-color:#868686;
+}
+
+/* Alert box */
+

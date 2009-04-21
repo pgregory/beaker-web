@@ -5,13 +5,13 @@ class Upload
 {
 	static function main()
 	{
-		Loader.BASE_DIR = "/home/pgregory/haxe_test/web/templates/";
-		Loader.TMP_DIR = "/home/pgregory/haxe_test/web/compiled/";
+		Loader.BASE_DIR = neko.Web.getCwd() + "templates/";
+		Loader.TMP_DIR = neko.Web.getCwd() + "compiled/";
 		Loader.MACROS = null;
 		Loader.OPTIMIZED = false;
 		var t = new Template("upload.mtt");
 
-		var cnx = neko.db.Sqlite.open("/home/pgregory/haxe_test/web/beaker.db");
+		var cnx = neko.db.Sqlite.open(neko.Web.getCwd() + "beaker.db");
 		neko.db.Manager.cnx = cnx;
 		neko.db.Manager.initialize();
 		var configs = Config.manager.all();
