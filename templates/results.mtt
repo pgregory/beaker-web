@@ -2,7 +2,7 @@
 	<tr class="headings">
 		<td class="test-title blank"></td>
 		::foreach test tests::
-			<td class="test-title"> ::test.title:: </td>
+			<td class="test-title"> ::test.label:: </td>
 		::end::
 		<td class="metric-title">Performance Metric</td>
 	</tr>

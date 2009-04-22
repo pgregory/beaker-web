@@ -2,7 +2,7 @@
 	::fill content::
 		<h1>View Beaker Results</h1>
 		::if alert::
-			::raw alert::
+			<div class="notification">::alert::</div>
 		::end::
 
 		::use 'results.mtt'::::end::

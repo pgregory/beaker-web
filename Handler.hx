@@ -19,11 +19,11 @@ class Handler extends mtwin.web.Handler<Void> {
 
 	public function doConvert() {
 		var params = neko.Web.getMultipart(80000);
-		var alert : String = "";
 		if(haxe.Md5.encode(params.get("password")) == "bf6da5a41799708a33f0cd4dd167e4e2") {
 			processResultSet(params.get("config"), params.get("resultset"));
+			App.context.alert = "Successfully uploaded result set";
 		} else {
-			alert = "<div class=\"notification\">Failed: Invalid password</div>";
+			App.context.alert = "Failed: Invalid password";
 		}
 		neko.Web.redirect("http://beaker.aqsis.org/index.n");
 	}
