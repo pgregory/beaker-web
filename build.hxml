@@ -1,14 +1,3 @@
--neko Main.n
--main Main
--lib mtwin
-
---next
-
--neko Convert.n
--main Convert
-
---next
-
--neko Upload.n
--main Upload
+-neko index.n
+-main App
 -lib mtwin
