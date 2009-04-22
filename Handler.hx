@@ -25,7 +25,7 @@ class Handler extends mtwin.web.Handler<Void> {
 		} else {
 			App.context.alert = "Failed: Invalid password";
 		}
-		neko.Web.redirect("http://beaker.aqsis.org/index.n");
+		neko.Web.redirect("/index.n");
 	}
 
 	override function prepareTemplate( t:String ) {

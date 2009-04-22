@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <result_sets config="niobe">
 	<result_set tag="1.4.1">
-		<result test="capsules" time="129"/>
-		<result test="makehuman" time="254"/>
-		<result test="250mm" time="114"/>
-		<result test="25mm" time="30"/>
-		<result test="0mm" time="6"/>
-		<result test="killeroo" time="12"/>
-		<result test="smoky" time="109"/>
-		<result test="petunia" time="107"/>
-		<result test="depth complexity 10" time="3"/>
-		<result test="depth complexity 30" time="8.5"/>
-		<result test="depth complexity 100" time="7.3"/>
-		<result test="depth complexity rand" time="18"/>
+		<result test="capsules.rib" time="129"/>
+		<result test="makehuman.rib" time="254"/>
+		<result test="250mm.rib" time="114"/>
+		<result test="25mm.rib" time="30"/>
+		<result test="0mm.rib" time="6"/>
+		<result test="killeroo-subd-1k-rib.rib" time="12"/>
+		<result test="smoky.rib" time="109"/>
+		<result test="petunia.rib" time="107"/>
+		<result test="depthcomplexity10.rib" time="3"/>
+		<result test="depthcomplexity30.rib" time="8.5"/>
+		<result test="depthcomplexity100.rib" time="7.3"/>
+		<result test="depthcomplexityRand.rib" time="18"/>
 	</result_set>
 	<result_set tag="Beaker-1">
-		<result test="capsules" time="120"/>
-		<result test="makehuman" time="203"/>
-		<result test="250mm" time="48"/>
-		<result test="25mm" time="14"/>
-		<result test="0mm" time="6.6"/>
-		<result test="killeroo" time="13"/>
-		<result test="smoky" time="90"/>
-		<result test="petunia" time="70"/>
-		<result test="depth complexity 10" time="4.8"/>
-		<result test="depth complexity 30" time="14"/>
-		<result test="depth complexity 100" time="16"/>
-		<result test="depth complexity rand" time="29"/>
+		<result test="capsules.rib" time="120"/>
+		<result test="makehuman.rib" time="203"/>
+		<result test="250mm.rib" time="48"/>
+		<result test="25mm.rib" time="14"/>
+		<result test="0mm.rib" time="6.6"/>
+		<result test="killeroo-subd-1k-rib.rib" time="13"/>
+		<result test="smoky.rib" time="90"/>
+		<result test="petunia.rib" time="70"/>
+		<result test="depthcomplexity10.rib" time="4.8"/>
+		<result test="depthcomplexity30.rib" time="14"/>
+		<result test="depthcomplexity100.rib" time="16"/>
+		<result test="depthcomplexityRand.rib" time="29"/>
 	</result_set>
 	<result_set tag="Beaker-2">
-		<result test="capsules" time="121"/>
-		<result test="makehuman" time="203"/>
-		<result test="250mm" time="25"/>
-		<result test="25mm" time="11"/>
-		<result test="0mm" time="6.6"/>
-		<result test="killeroo" time="13"/>
-		<result test="smoky" time="90"/>
-		<result test="petunia" time="60"/>
-		<result test="depth complexity 10" time="4.6"/>
-		<result test="depth complexity 30" time="14"/>
-		<result test="depth complexity 100" time="16"/>
-		<result test="depth complexity rand" time="28"/>
+		<result test="capsules.rib" time="121"/>
+		<result test="makehuman.rib" time="203"/>
+		<result test="250mm.rib" time="25"/>
+		<result test="25mm.rib" time="11"/>
+		<result test="0mm.rib" time="6.6"/>
+		<result test="killeroo-subd-1k-rib.rib" time="13"/>
+		<result test="smoky.rib" time="90"/>
+		<result test="petunia.rib" time="60"/>
+		<result test="depthcomplexity10.rib" time="4.6"/>
+		<result test="depthcomplexity30.rib" time="14"/>
+		<result test="depthcomplexity100.rib" time="16"/>
+		<result test="depthcomplexityRand.rib" time="28"/>
 	</result_set>
 	<result_set tag="Beaker-3">
-		<result test="capsules" time="74"/>
-		<result test="makehuman" time="341"/>
-		<result test="250mm" time="15"/>
-		<result test="25mm" time="7.3"/>
-		<result test="0mm" time="4.3"/>
-		<result test="killeroo" time="14"/>
-		<result test="smoky" time="90"/>
-		<result test="petunia" time="43"/>
-		<result test="depth complexity 10" time="2.2"/>
-		<result test="depth complexity 30" time="5.6"/>
-		<result test="depth complexity 100" time="4.7"/>
-		<result test="depth complexity rand" time="13"/>
+		<result test="capsules.rib" time="74"/>
+		<result test="makehuman.rib" time="341"/>
+		<result test="250mm.rib" time="15"/>
+		<result test="25mm.rib" time="7.3"/>
+		<result test="0mm.rib" time="4.3"/>
+		<result test="killeroo-subd-1k-rib.rib" time="14"/>
+		<result test="smoky.rib" time="90"/>
+		<result test="petunia.rib" time="43"/>
+		<result test="depthcomplexity10.rib" time="2.2"/>
+		<result test="depthcomplexity30.rib" time="5.6"/>
+		<result test="depthcomplexity100.rib" time="4.7"/>
+		<result test="depthcomplexityRand.rib" time="13"/>
 	</result_set>
 </result_sets>

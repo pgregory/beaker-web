@@ -1,4 +1,4 @@
-<form id="resultset_upload" action="http://beaker.aqsis.org/index.n/convert" method="post" enctype="multipart/form-data">
+<form id="resultset_upload" action="/index.n/convert" method="post" enctype="multipart/form-data">
 	<table>
 		<tr>
 			<td>
