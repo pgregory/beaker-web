@@ -1,3 +1,14 @@
+body {
+    cursor: default;
+    font-family: sans-serif;
+}
+
+td {
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+    text-align: center;
+}
+
 tr.oddtrue {
 	background-color: lightgrey;
 }
@@ -6,13 +17,13 @@ tr.oddtrue {
 
 table#results {
 	empty-cells:show;
-	border-collapse:separate;
-	border:1px solid black;
-	border-spacing:1;
+	/*border-collapse:separate;
+	border:1px solid black;*/
+	border-spacing:0;
 }
 
 table#results * td {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 tr.headings {
@@ -20,7 +31,7 @@ tr.headings {
 
 td.test-title {
 	border:0;
-	background-color:#cacaca;
+	background-color:#bcd;
 	text-align:center;
 }
 
@@ -30,8 +41,12 @@ td.test-title.blank {
 
 td.metric-title {
 	border:0;
-	background-color:#cacaca;
+	background-color:#abc;
 	text-align:center;
+}
+
+td.total {
+    background-color: #eee
 }
 
 tr.config-row {
@@ -39,19 +54,26 @@ tr.config-row {
 
 td.config-name {
 	background-color:#a8a8a8;
+        color: white;
 	text-align:center;
 	text-transform:capitalize;
 }
 
 td.state-1, td.regression {
-	background-color: red;
+	color: red;
 }
 
 td.state1, td.progression {
-	background-color:#4f4;
+	color: green;
+}
+
+tr.result-row:hover {
+    background-color: lightgrey;
+    opacity: 1;
 }
 
 tr.result-row {
+    opacity: 0.6;
 }
 
 td.tag-name {
@@ -59,4 +81,5 @@ td.tag-name {
 }
 
 /* Alert box */
+
 
