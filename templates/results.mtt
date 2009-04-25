@@ -35,13 +35,17 @@
 					::elseif total < lastTotal::
 						::set class = "progression"::
 					::end::
+				::else::
+					::set perc = null::
 				::end::
-				::set lastTotal = total::
+				::if total != 0::
+					::set lastTotal = total::
+				::end::
 				<td ::attr class "total "+class::>
 					::if total != 0::
 						::total::
 							::if perc != null::
-								(::helpers.truncatePercentage(perc)::)%)
+								(::helpers.truncatePercentage(perc)::%)
 							::end::
 					::end::
 				</td>

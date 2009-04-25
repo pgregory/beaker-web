@@ -1,7 +1,9 @@
 beaker-web=~/haxe_test/web [filter="*.hxml *.hx *.sql"] {
  build.hxml
+ App.hx
  Config.hx
- Main.hx
+ Handler.hx
+ Helpers.hx
  Result.hx
  ResultManager.hx
  Tag.hx
@@ -9,10 +11,12 @@ beaker-web=~/haxe_test/web [filter="*.hxml *.hx *.sql"] {
  data.sql
  templates=templates [filter="*.mtt"] {
   configs.mtt
+  macros.mtt
   results.mtt
   tags.mtt
   template.mtt
   tests.mtt
+  upload.mtt
   view.mtt
  }
 }
