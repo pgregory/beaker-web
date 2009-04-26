@@ -15,6 +15,7 @@
 			<tr class="result-row">
 				<td class="tag-name"> ::tag.name:: </td>
 				::set total = 0::
+				::set fullset = 1::
 				::foreach test tests::
 					::set result = config.getResult(tag.id, test.id)::
 					::if result != null::
@@ -25,30 +26,31 @@
 						::set total = total + result.time::
 					::else::
 						<td class="time no-time"></td>
+						::set fullset = 0::
 					::end::
 				::end::
 				::set class = "no-change"::
-				::if lastTotal != 0 && total != 0::
-					::set perc = (lastTotal-total)/lastTotal*100::
-					::if total > lastTotal::
-						::set class = "regression"::
-					::elseif total < lastTotal::
-						::set class = "progression"::
+				::if total != 0 && fullset == 1::
+					::if lastTotal != 0::
+						::set perc = (lastTotal-total)/lastTotal*100::
+						::if total > lastTotal::
+							::set class = "regression"::
+						::elseif total < lastTotal::
+							::set class = "progression"::
+						::end::
+					::else::
+						::set perc = null::
 					::end::
-				::else::
-					::set perc = null::
-				::end::
-				::if total != 0::
 					::set lastTotal = total::
-				::end::
-				<td ::attr class "total "+class::>
-					::if total != 0::
+					<td ::attr class "total "+class::>
 						::total::
-							::if perc != null::
-								(::helpers.truncatePercentage(perc)::%)
-							::end::
-					::end::
-				</td>
+						::if perc != null::
+							(::helpers.truncatePercentage(perc)::%)
+						::end::
+					</td>
+				::else::
+					<td/>
+				::end::
 			</tr>
 		::end::
 	::end::
