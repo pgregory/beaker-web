@@ -1,0 +1,28 @@
+::use 'template.mtt'::
+	::fill content::
+		<h1>Confirm Results</h1>
+		<h2>Key:</h2>
+		<span class="item-exists-false">Item (config, tag, test) doesn't exist, it will be created</span>
+		<br/>
+		<span class="result-exists-true">This result already exists in the database, the value will be updated.</span>
+		<form id="resultset-confirm" action="/index.n/convert?filename=::tempXml::" method="post">
+			<input type="submit" value="Confirm"/>
+		</form>
+		
+		<ul>
+			<li>Config: <span class="item-exists-::results.config.exists::">::results.config.name::</span>
+				<ul>
+					::foreach tag results.config.tags::
+					<li>Tag: <span class="item-exists-::tag.exists::">::tag.name::</span>
+						<ul>
+							::foreach value tag.values::
+							<li class="result-exists-::value.exists::">Test: <span class="item-exists-::value.test.exists::">::value.test.name::</span> Time: ::value.time::</li>
+							::end::
+						</ul>
+					</li>
+					::end::
+				</ul>
+			</li>
+		</ul>
+	::end::
+::end::

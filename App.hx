@@ -5,6 +5,9 @@ class App {
 
 	public static var context : Dynamic;
 
+	public static var basePath : String;
+	public static var tmpPath : String;
+
 	public static function main() {
 		mtwin.templo.Loader.BASE_DIR = neko.Web.getCwd() + "templates/";
 		mtwin.templo.Loader.TMP_DIR = neko.Web.getCwd() + "compiled/";
@@ -12,6 +15,8 @@ class App {
 		mtwin.templo.Loader.OPTIMIZED = false;
 		context = {};
 		template = null;
+		basePath = neko.Web.getCwd();
+		tmpPath = neko.Web.getCwd() + "tmp/";
 
 		var cnx = neko.db.Sqlite.open(neko.Web.getCwd() + "beaker.db");
 		neko.db.Manager.cnx = cnx;

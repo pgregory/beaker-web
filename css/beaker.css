@@ -3,12 +3,6 @@ body {
     font-family: sans-serif;
 }
 
-td {
-    border-bottom: 1px solid lightgrey;
-    padding: 5px;
-    text-align: center;
-}
-
 tr.oddtrue {
 	background-color: lightgrey;
 }
@@ -23,7 +17,9 @@ table#results {
 }
 
 table#results * td {
-	/*border: 1px solid black;*/
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+    text-align: center;
 }
 
 tr.headings {
@@ -80,6 +76,12 @@ td.tag-name {
 	background-color:#868686;
 }
 
-/* Alert box */
+/* Result confirmation page */
 
+.item-exists-false {
+	color:#ff0000;
+}
 
+.result-exists-true {
+	background-color:#ffff00;
+}

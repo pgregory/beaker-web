@@ -1,37 +1,30 @@
-<form id="resultset_upload" action="/index.n/convert" method="post" enctype="multipart/form-data">
-	<table>
-		<tr>
-			<td>
-				Config:
-			</td>
-			<td>
-				<select name="config">
-				::foreach config configs::
-					<option value="::config.name::">::config.name::</option>
-				::end::
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Password:
-			</td>
-			<td>
-				<input type="password" name="password"/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Result Set:
-			</td>
-			<td>
-				<input type="file" name="resultset"><br clear="all"/><br/></input>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2" align="right">
-				<input type="submit" name="Upload"/>
-			</td>
-		</tr>
-	</table>
-</form>
+::use 'template.mtt'::
+	::fill content::
+		<h1>Upload Result Set</h1>
+		<form id="resultset_upload" action="/index.n/confirm" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" name="password"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Result Set:
+					</td>
+					<td>
+						<input type="file" name="resultset"><br clear="all"/><br/></input>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right">
+						<input type="submit" value="Upload"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	::end::
+::end::
