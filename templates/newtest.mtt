@@ -18,7 +18,7 @@
 							<td> <input type="text" name="label[]"/> </td>
 						</tr>
 						<tr>
-							<td> Label: </td>
+							<td> Notes: </td>
 							<td> <textarea name="notes[]" rows="5"/></td>
 						</tr>
 					</table>

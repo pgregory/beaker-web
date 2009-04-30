@@ -26,6 +26,7 @@ beaker-web=~/haxe_test/web [filter="*.hxml *.hx *.sql *.xml"] {
   macros.mtt
   newconfig.mtt
   newtag.mtt
+  newtest.mtt
   results.mtt
   tags.mtt
   template.mtt
