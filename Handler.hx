@@ -5,6 +5,9 @@ class Handler extends mtwin.web.Handler<Void> {
 		free("upload", "upload.mtt", doUpload);
 		free("convert", doConvert);
 		free("confirm", "confirm.mtt", doConfirm);
+		free("config", handler(new ConfigHandler()));
+		free("tag", handler(new TagHandler()));
+		free("test", handler(new TestHandler()));
 	}
 
 	public function doView() {

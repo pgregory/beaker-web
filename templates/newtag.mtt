@@ -1,0 +1,30 @@
+::use 'template.mtt'::
+	::fill content::
+		<h1>Add New Tag</h1>
+		<form id="tag_new" action="/index.n/tag/create" method="post">
+			<table>
+				<tr>
+					<td> Password: </td>
+					<td> <input type="password" name="password"/> </td>
+				</tr>
+				<tr>
+					<table class="tag_entry" border="1px solid #000">
+						<tr>
+							<td> Name: </td>
+							<td><input type="text" name="name[]"/> </td>
+						</tr>
+						<tr>
+							<td> Position: </td>
+							<td> <input type="text" name="position[]"/> </td>
+						</tr>
+					</table>
+				</tr>
+				<tr>
+					<td colspan="2" align="right">
+						<input type="submit" value="Upload"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	::end::
+::end::

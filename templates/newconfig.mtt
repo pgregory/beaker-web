@@ -1,0 +1,54 @@
+::use 'template.mtt'::
+	::fill content::
+		<h1>Add New Config</h1>
+		<form id="config_new" action="/index.n/config/create" method="post">
+			<table>
+				<tr>
+					<td> Password: </td>
+					<td> <input type="password" name="password"/> </td>
+				</tr>
+				<tr>
+					<table class="config_entry" border="1px solid #000">
+						<tr>
+							<td> Name: </td>
+							<td><input type="text" name="name[]"/> </td>
+						</tr>
+						<tr>
+							<td> Owner: </td>
+							<td> <input type="text" name="owner[]"/> </td>
+						</tr>
+						<tr>
+							<td> Model: </td>
+							<td> <input type="text" name="model[]"/> </td>
+						</tr>
+						<tr>
+							<td> Processor: </td>
+							<td> <input type="text" name="processor[]"/> </td>
+						</tr>
+						<tr>
+							<td> Processor Count: </td>
+							<td> <input type="text" name="processor_count[]"/> </td>
+						</tr>
+						<tr>
+							<td> Memory: </td>
+							<td> <input type="text" name="memory[]"/> </td>
+						</tr>
+						<tr>
+							<td> OS: </td>
+							<td> <input type="text" name="os[]"/> </td>
+						</tr>
+						<tr>
+							<td> Compiler: </td>
+							<td> <input type="text" name="compiler[]"/> </td>
+						</tr>
+					</table>
+				</tr>
+				<tr>
+					<td colspan="2" align="right">
+						<input type="submit" value="Upload"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	::end::
+::end::

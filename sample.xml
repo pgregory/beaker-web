@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="hathor" owner="Paul Gregory" model="ASUS eeePC 900" processor="Intel Celeron M 900MHz" processor_count="1" memory="1024" os="Ubuntu 8.04" compiler="g++ 4.1.2"/>
+<tag name="Beaker-99" position="10"/>
+<test title="raytracing_test.rib" label="raytracing_test">This tests the new raytracing functionality</test>
+<result_sets config="hathor">
+	<result_set tag="Beaker-99">
+		<result test="capsules.rib" time="143"/>
+		<result test="makehuman.rib" time="564"/>
+		<result test="250mm.rib" time="35"/>
+		<result test="25mm.rib" time="14"/>
+		<result test="0mm.rib" time="7.9"/>
+		<result test="killeroo-subd-1k-rib.rib" time="22"/>
+		<result test="smoky.rib" time="125"/>
+		<result test="petunia.rib" time="92"/>
+		<result test="depthcomplexity10.rib" time="4.1"/>
+		<result test="depthcomplexity30.rib" time="10"/>
+		<result test="depthcomplexity100.rib" time="9"/>
+		<result test="depthcomplexityRand.rib" time="24"/>
+		<result test="raytracing_test.rib" time="24554"/>
+	</result_set>
+</result_sets>

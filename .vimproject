@@ -1,17 +1,31 @@
-beaker-web=~/haxe_test/web [filter="*.hxml *.hx *.sql"] {
+beaker-web=~/haxe_test/web [filter="*.hxml *.hx *.sql *.xml"] {
  build.hxml
  App.hx
  Config.hx
+ ConfigHandler.hx
  Handler.hx
  Helpers.hx
  Result.hx
  ResultManager.hx
  Tag.hx
+ TagHandler.hx
  Test.hx
+ TestHandler.hx
  data.sql
+ cubeoctahedron.xml
+ khepri.xml
+ niobe.xml
+ osiris.xml
+ sample.xml
+ css=css [filter="*.css"]{
+  beaker.css
+ }
  templates=templates [filter="*.mtt"] {
   configs.mtt
+  confirm.mtt
   macros.mtt
+  newconfig.mtt
+  newtag.mtt
   results.mtt
   tags.mtt
   template.mtt
