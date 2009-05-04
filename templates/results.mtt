@@ -4,11 +4,14 @@
 		::foreach test tests::
 			<td class="test-title"> ::test.label:: </td>
 		::end::
-		<td class="metric-title">Performance Metric</td>
+		<td class="metric-title">Incremental Metric</td>
+		<td class="metric-title">Baseline Metric</td>
 	</tr>
+	::set baseline = "1.4.1"::
 	::foreach config configs::
+		::set baseline_time = null::
 		<tr class="config-row">
-			<td class="config-name" ::attr colspan repeat.test.size+2::>::config.name::</td>
+			<td class="config-name" ::attr colspan repeat.test.size+3::>::config.name::</td>
 		</tr>
 		::set lastTotal = 0::
 		::foreach tag tags::
@@ -48,7 +51,24 @@
 							(::helpers.truncatePercentage(perc)::%)
 						::end::
 					</td>
+					::if baseline_time::
+						::set baseline_diff = (baseline_time-total)/baseline_time*100::
+						::if baseline_diff > 0::
+							::set class = "progression"::
+						::elseif total < lastTotal::
+							::set class = "regression"::
+						::end::
+						<td ::attr class "total "+class::>::helpers.truncatePercentage(baseline_diff)::%</td>
+					::else::
+						::if tag.name == baseline::
+							::set baseline_time = total::
+							<td>-----</td>
+						::else:::
+							<td/>
+						::end::
+					::end::
 				::else::
+					<td/>
 					<td/>
 				::end::
 			</tr>
